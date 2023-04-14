@@ -1,0 +1,161 @@
+* { 
+    box-sizing: border-box;
+    margin:0; 
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    height: 900;
+    min-height: 100%;
+    max-width: 1000;
+    width: 1000;
+    background-color: #d0dcfe;
+    margin: auto;
+    margin-top: 10;
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.2rem;
+    display: grid;
+    grid: gap 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4 auto);
+
+    grid-template-areas: "header header header"
+                         "nav nav nav"
+                         "main main aside"
+                         "widget1 widget2 aside"
+                         "footer footer footer";
+}
+
+
+
+.contenedor > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+div{
+    height: 50px;
+    width: 1000px;
+    margin: 20px auto;
+    float: right;
+    background-color: #bdaf9e;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	float: right;
+}
+
+nav a {
+	margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+header {
+    background-color: #474645;
+    color: #fff;
+    grid-area: header;
+}
+
+main {
+    height: 400;
+    width: 825;
+    background-color: rgb(155, 158, 157);
+    grid-area: main;
+    float: left;
+}
+
+nav {
+    background: color #e0f7a1;
+    color: #fff;
+    grid-area: nav;
+}
+
+aside, .Us {
+    height: 570;
+    width: 150;
+    background: #5b5e83;
+    grid-area: aside;
+    float: right;
+}
+
+#widget1, .w1 {
+    height: 150;
+    width: 250;
+    background-color: #18aef3;
+    grid-area: widget1;
+    float: left;
+}
+
+#widget2, .w2 {
+    height: 150;
+    width: 250;
+    background-color: #18aef3;
+    grid-area: widget1;
+    float: left;
+}
+
+footer {
+    height: 100;
+    width: 1000;
+    background-color: #746974;
+    grid-area: footer;
+    float: left;
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    body {
+        height: 900;
+        min-height: 100%;
+        width: 550;
+    }
+
+    header {
+        width: 500px;
+        height: 50px;
+    }
+    
+    div, nav {
+        width: 500px;
+        height: 50px;
+    }
+
+    main { 
+        width: 500px;
+        height: 470px;
+    }
+
+    aside .Us {
+        width: 150px;
+        height: 500px;
+    }
+
+    #widget1, .w1, #widget2, .w2 {
+        float: center;
+    }
+    
+    footer {
+        width: 500px;
+        height: 100px;
+    }
+
+  }
+
+  
